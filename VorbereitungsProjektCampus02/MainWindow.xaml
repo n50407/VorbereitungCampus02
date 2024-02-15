@@ -24,7 +24,7 @@
         </Menu>
         <ToolBar DockPanel.Dock="Top">
             <Button>Bearbeiten</Button>
-            <Button>Speichern</Button>
+            <Button Click="DeleteProduct_Click">Löschen</Button>
         </ToolBar>
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem Content="{Binding StatusText1}"></StatusBarItem>

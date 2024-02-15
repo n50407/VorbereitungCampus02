@@ -55,7 +55,12 @@ namespace VorbereitungsProjektCampus02.Models
             NotifyPropertyChanged("StatusText1");
         }
 
-      
+        internal void RemoveProdukt(Product ausgewaehltesProdukt)
+        {
+            ObsProducts.Remove(ausgewaehltesProdukt);
+            context.Products.Remove(ausgewaehltesProdukt);
+            context.SaveChanges();
+        }
 
         private Product _AusgewaehltesProdukt;
 

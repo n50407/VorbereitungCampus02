@@ -62,5 +62,11 @@ namespace VorbereitungsProjektCampus02
 
             suche.Show();
         }
+
+        private void DeleteProduct_Click(object sender, RoutedEventArgs e)
+        {
+            produktViewModel.RemoveProdukt(produktViewModel.AusgewaehltesProdukt);
+            
+        }
     }
 }
