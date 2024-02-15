@@ -25,6 +25,7 @@ namespace VorbereitungsProjektCampus02.Models
         public ObservableCollection<Product> ObsProducts{ get; set; }
 
         public string StatusText1 { get; set; }
+        public string StatusText2 { get; set; }
         public ProduktViewModel()
         {
             ObsProducts = new ObservableCollection<Product>();
