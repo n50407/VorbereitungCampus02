@@ -10,7 +10,7 @@ namespace VorbereitungsProjektCampus02.Models
 {
     internal class ProduktViewModel: INotifyPropertyChanged
     {
-        private ProduktDBContextV2 context = new ProduktDBContextV2();
+        private ProduktDBContextV3 context = new ProduktDBContextV3();
 
         public event PropertyChangedEventHandler PropertyChanged;
 

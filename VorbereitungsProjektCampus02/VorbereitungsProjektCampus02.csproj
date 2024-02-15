@@ -94,7 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ProduktDBContextV2.cs" />
+    <Compile Include="Models\ProduktDBContextV3.cs" />
     <Compile Include="Models\ProduktViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
