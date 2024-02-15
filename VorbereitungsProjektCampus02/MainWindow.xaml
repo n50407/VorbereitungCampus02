@@ -11,7 +11,7 @@
             <MenuItem Header="Datei">
                 <MenuItem Header="Neu"></MenuItem>
                 <MenuItem Header="Öffnen"></MenuItem>
-                <MenuItem Header="Beenden C1"></MenuItem>
+                <MenuItem Header="Beenden"></MenuItem>
             </MenuItem> 
             <MenuItem Header="Bearbeiten">
                 <MenuItem Header="Kopieren"></MenuItem>
