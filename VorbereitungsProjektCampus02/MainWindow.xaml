@@ -18,6 +18,9 @@
                 <MenuItem Header="Einfügen"></MenuItem>
                 <MenuItem Header="Ausschneiden"></MenuItem>
             </MenuItem>
+            <MenuItem Header="Extras">
+                <MenuItem Header="Suchen" Click="OpenSearchWindow_Click"></MenuItem>                
+            </MenuItem>
         </Menu>
         <ToolBar DockPanel.Dock="Top">
             <Button>Bearbeiten</Button>

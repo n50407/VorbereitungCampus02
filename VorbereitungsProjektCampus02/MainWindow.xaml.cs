@@ -52,5 +52,15 @@ namespace VorbereitungsProjektCampus02
         
 
         }
+
+        private void OpenSearchWindow_Click(object sender, RoutedEventArgs e)
+        {
+            SuchWindow suche = new SuchWindow();
+            produktViewModel.Suchbegriff = "bitte Suchbegriff eingeben";
+            suche.DataContext = produktViewModel;
+            produktViewModel.Suchergebnis =new System.Collections.ObjectModel.ObservableCollection<Product>();
+
+            suche.Show();
+        }
     }
 }

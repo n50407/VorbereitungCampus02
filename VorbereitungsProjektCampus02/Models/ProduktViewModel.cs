@@ -34,7 +34,10 @@ namespace VorbereitungsProjektCampus02.Models
             {
                 ObsProducts.Add(product);
             }
+
+            Suchergebnis = new ObservableCollection<Product>();
             ChangeStatustxt();
+
         }
 
         public int AddProduct(Product product)
@@ -76,5 +79,25 @@ namespace VorbereitungsProjektCampus02.Models
             }
         }
 
+        public ObservableCollection<Product> Suchergebnis { get; set; }
+
+        private string _Suchbegriff;
+
+        public string Suchbegriff
+        {
+            get { return _Suchbegriff; }
+            set
+            {
+                _Suchbegriff = value;
+                Suchergebnis.Clear();
+                foreach (var item in ObsProducts)
+                {
+                    if (item.Produktbezeichnung.Contains(_Suchbegriff))
+                    {
+                        Suchergebnis.Add(item);
+                    }
+                }
+            }
+        }
     }
 }
