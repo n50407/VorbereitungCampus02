@@ -9,7 +9,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Datei">
-                <MenuItem Header="Neu"></MenuItem>
+                <MenuItem Header="Neu" Click="AddNewProduct_Click"></MenuItem>
                 <MenuItem Header="Öffnen"></MenuItem>
                 <MenuItem Header="Beenden"></MenuItem>
             </MenuItem> 
@@ -28,7 +28,8 @@
             <StatusBarItem>Item 2</StatusBarItem>
         </StatusBar>
         <StackPanel Orientation="Horizontal">
-            <ListBox ItemsSource="{Binding ObsProducts}" SelectedItem="{Binding AusgewaehltesProdukt}">
+            <ListBox ItemsSource="{Binding ObsProducts}" 
+                     SelectedItem="{Binding AusgewaehltesProdukt}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>

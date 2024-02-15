@@ -35,5 +35,22 @@ namespace VorbereitungsProjektCampus02
             this.DataContext= produktViewModel;
                 
         }
+
+        private void AddNewProduct_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewProductWindow addNewProductWindow = new AddNewProductWindow();
+            produktViewModel.NeuesProdukt = new Product()
+            {
+                Produktbezeichnung = "Neues Produkt",
+                Kategorie = "Neue Kategorie",
+                Preis = 0,
+                Aktiv = true,
+                Bild = "Lap.png"
+            };
+            addNewProductWindow.DataContext = produktViewModel;
+            addNewProductWindow.ShowDialog();
+        
+
+        }
     }
 }

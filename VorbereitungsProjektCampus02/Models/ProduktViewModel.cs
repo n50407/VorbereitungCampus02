@@ -64,5 +64,17 @@ namespace VorbereitungsProjektCampus02.Models
             }
         }
 
+        private Product _NeuesProdukt;
+
+        public Product NeuesProdukt
+        {
+            get { return _NeuesProdukt; }
+            set
+            {
+                _NeuesProdukt = value;
+                NotifyPropertyChanged("NeuesProdukt");
+            }
+        }
+
     }
 }

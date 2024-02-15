@@ -1,0 +1,25 @@
+﻿<Window x:Class="VorbereitungsProjektCampus02.AddNewProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VorbereitungsProjektCampus02"
+        mc:Ignorable="d"
+        Title="AddNewProductWindow" Height="450" Width="800">
+    <DockPanel>
+        <UniformGrid DockPanel.Dock="Top" Columns="2" Rows="4">
+        <Label>Bezeichnung</Label>
+        <TextBox Text="{Binding NeuesProdukt.Produktbezeichnung}"></TextBox>
+        <Label>Preis</Label>
+        <StackPanel>
+        <Slider Minimum="0" Maximum="100" Value="{Binding NeuesProdukt.Preis}"></Slider>
+        <Label Content="{Binding NeuesProdukt.Preis}"></Label>
+        </StackPanel>
+        <Label>Aktiv</Label>
+        <CheckBox IsChecked="{Binding NeuesProdukt.Aktiv}"></CheckBox>
+        <Label>Bild</Label>
+        <TextBox Text="{Binding NeuesProdukt.Bild}"></TextBox>
+    </UniformGrid>
+    <Button DockPanel.Dock="Bottom" Click="AddNewProductAndClose">Speichern und Schließen</Button>
+    </DockPanel>
+</Window>

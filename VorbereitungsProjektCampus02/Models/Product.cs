@@ -44,7 +44,10 @@ namespace VorbereitungsProjektCampus02.Models
         public double Preis
         {
             get { return _Preis; }
-            set { _Preis = value; }
+            set { 
+                _Preis = value;
+                OnPropertyChanged("Preis");
+            }
         }
 
         private bool _Aktiv;
