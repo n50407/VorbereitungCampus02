@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VorbereitungsProjektCampus02.Models
 {
-    internal class ProduktDBContext:DbContext
+    internal class ProduktDBContextV2:DbContext
     {
         public DbSet<Product> Products { get; set; }
     }

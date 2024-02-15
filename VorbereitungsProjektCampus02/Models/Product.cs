@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -68,6 +69,9 @@ namespace VorbereitungsProjektCampus02.Models
             }
         }
 
+        public decimal Gewicht { get; set; }
+
+        public decimal Size { get; set; }
 
     }
       
