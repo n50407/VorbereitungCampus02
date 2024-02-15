@@ -1,0 +1,56 @@
+﻿<Window x:Class="VorbereitungsProjektCampus02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VorbereitungsProjektCampus02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Neu"></MenuItem>
+                <MenuItem Header="Öffnen"></MenuItem>
+                <MenuItem Header="Beenden C1"></MenuItem>
+            </MenuItem> 
+            <MenuItem Header="Bearbeiten">
+                <MenuItem Header="Kopieren"></MenuItem>
+                <MenuItem Header="Einfügen"></MenuItem>
+                <MenuItem Header="Ausschneiden"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top">
+            <Button>Bearbeiten</Button>
+            <Button>Speichern</Button>
+        </ToolBar>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="{Binding StatusText1}"></StatusBarItem>
+            <StatusBarItem>Item 2</StatusBarItem>
+        </StatusBar>
+        <StackPanel Orientation="Horizontal">
+            <ListBox ItemsSource="{Binding ObsProducts}" SelectedItem="{Binding AusgewaehltesProdukt}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Label>Bezeichnung</Label>
+                            <TextBlock Text="{Binding Produktbezeichnung}"/>
+                            <Label>Preis</Label>
+                            <TextBlock Text="{Binding Preis}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <GroupBox Header="Details">
+                <StackPanel>
+                    <Label>Produktbezeichnung</Label>
+                    <TextBox Text="{Binding AusgewaehltesProdukt.Produktbezeichnung, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    <Label>Preis</Label>
+                    <TextBox Text="{Binding AusgewaehltesProdukt.Preis}"></TextBox>
+                    <CheckBox IsChecked="{Binding AusgewaehltesProdukt.Aktiv}"></CheckBox>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        
+        
+    </DockPanel>
+</Window>
