@@ -73,6 +73,8 @@ namespace VorbereitungsProjektCampus02.Models
 
         public decimal Size { get; set; }
 
+        public string   Color { get; set; }
+
     }
       
     
